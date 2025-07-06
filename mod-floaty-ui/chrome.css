@@ -312,6 +312,7 @@
 
   --grain-bg-url: url(chrome://browser/content/zen-images/grain-bg.png);
 
+  /* Disable grain so the default background can work correctly */
   #titlebar::after {
     background-image: none !important;
     opacity: 1 !important;
@@ -342,6 +343,7 @@
     }
   }
 
+  /* Disable grain so the default background can work correctly */
   #zen-appcontent-navbar-container::before {
     background-image: none !important;
     opacity: 1 !important;
