@@ -21,7 +21,7 @@
     "property": "mod.floaty.use-floating-statuspanel",
     "label": "Floating Statuspanel",
     "type": "checkbox",
-    "defaultValue": true
+    "defaultValue": false
   },
   {
     "property": "mod.floaty.use-themed-sidebar",
@@ -51,7 +51,7 @@
     "property": "mod.floaty.use-themed-statuspanel",
     "label": "Themed Statuspanel",
     "type": "checkbox",
-    "defaultValue": true
+    "defaultValue": false
   },
   {
     "property": "mod.floaty.use-blur",
