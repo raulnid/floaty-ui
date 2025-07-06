@@ -1,90 +1,46 @@
 /* Only apply this CSS in Compact Mode */
 :root[zen-compact-mode="true"]:not([customizing]) {
-  --floaty-bg-theme: var(--zen-main-browser-background);
-  --floaty-bg-default: light-dark(#ebebeb, #1e1e1e);
-  --floaty-blur-radius: var(--mod-floaty-blur-radius);
-  --floaty-blur-saturation: var(--mod-floaty-blur-saturation);
-  --floaty-margin: var(--mod-floaty-margin);
-  --floaty-findbar-top-margin: var(--mod-floaty-findbar-top-margin);
-  --floaty-findbar-max-width: var(--mod-floaty-findbar-max-width);
+  /* LAYOUT ----------------------------------------------------------------- */
+
   --floaty-toolbox-padding: 0.35rem;
+
   --floaty-border-width: 0.5px;
   --floaty-border-color: light-dark(
     rgba(0, 0, 0, 0.15),
     rgba(255, 255, 255, 0.15)
   );
-  --floaty-border-offset: -2px;
-  --floaty-border-radius: 12px;
-  --floaty-border-radius-medium: calc(var(--floaty-border-radius) * (2 / 3)) !important;
-  --floaty-animation-duration: var(--mod-floaty-animation-duration);
-  --grain-bg-url: url(chrome://browser/content/zen-images/grain-bg.png);
-
-  --floaty-blur-filter: blur(var(--floaty-blur-radius))
-    saturate(var(--floaty-blur-saturation));
   --floaty-border-style: var(--floaty-border-width) solid
     var(--floaty-border-color);
+  --floaty-border-radius: 12px;
+  --floaty-border-radius-medium: calc(var(--floaty-border-radius) * (2 / 3)) !important;
+  --floaty-border-offset: -2px;
+
+  --floaty-margin: var(--mod-floaty-margin);
   --floaty-separation-margin: calc(
     var(--zen-element-separation) +
     var(--floaty-margin)
   );
-  --floaty-sidebar-margin: calc(
-    var(--floaty-separation-margin) -
-    (var(--zen-element-separation) / 2)
-  );
-  --floaty-sidebar-margin-total: calc(
-    var(--floaty-sidebar-margin) +
-    var(--zen-element-separation) +
-    1px
-  );
-  --floaty-bookmark-height: calc(30px + (var(--floaty-toolbox-padding) * 2));
-  --floaty-bookmark-offset: calc(
-    -1 *
-    (
-      var(--floaty-bookmark-height) +
-      (var(--floaty-margin) * 2) +
-      var(--zen-element-separation)
-    ) +
-    1px
-  );
 
-  /* Fallback when there are no colors from zen theme */
-  &:not([zen-should-be-dark-mode]) {
-    --floaty-bg-theme: rgb(from var(--floaty-bg-default) r g b / 0.72);
-  }
-
-  @media not (-moz-bool-pref: "mod.floaty.use-transparency") {
-    --floaty-bg-theme: var(--zen-main-browser-background-toolbar);
-
-    &:not([zen-should-be-dark-mode]) {
-      --floaty-bg-theme: var(--floaty-bg-default);
-    }
-  }
-
-  /* Allow blur on Compact Mode */
-  .browserSidebarContainer {
-    will-change: transform !important;
-    backface-visibility: hidden !important;
-  }
-
-  @media not (-moz-bool-pref: "mod.floaty.use-blur") {
-    --floaty-blur-filter: none;
-
-    .browserSidebarContainer {
-      will-change: auto !important;
-      backface-visibility: visible !important;
-    }
-  }
+  --floaty-animation-duration: var(--mod-floaty-animation-duration);
 
   @media not (-moz-bool-pref: "mod.floaty.use-animation"),
     (prefers-reduced-motion) {
     --floaty-animation-duration: 0s;
   }
 
-  /* SIDEBAR ---------------------------------------------------------------- */
-
   @media (-moz-bool-pref: "mod.floaty.use-floating-sidebar") {
     @media (-moz-bool-pref: "zen.view.use-single-toolbar"),
       (not (-moz-bool-pref: "zen.view.use-single-toolbar")) and (-moz-bool-pref: "zen.view.compact.hide-tabbar") {
+      --floaty-sidebar-margin: calc(
+        var(--floaty-separation-margin) -
+        (var(--zen-element-separation) / 2)
+      );
+      --floaty-sidebar-margin-total: calc(
+        var(--floaty-sidebar-margin) +
+        var(--zen-element-separation) +
+        1px
+      );
+
       #navigator-toolbox {
         padding: var(--floaty-sidebar-margin) !important;
         transition-duration: var(--floaty-animation-duration) !important;
@@ -118,8 +74,6 @@
       }
     }
   }
-
-  /* TOPBAR ----------------------------------------------------------------- */
 
   @media (-moz-bool-pref: "mod.floaty.use-floating-topbar") {
     @media (-moz-bool-pref: "zen.view.use-single-toolbar"),
@@ -157,6 +111,17 @@
     }
 
     @media (-moz-bool-pref: "zen.view.use-single-toolbar") {
+      --floaty-bookmark-height: calc(30px + (var(--floaty-toolbox-padding) * 2));
+      --floaty-bookmark-offset: calc(
+        -1 *
+        (
+          var(--floaty-bookmark-height) +
+          (var(--floaty-margin) * 2) +
+          var(--zen-element-separation)
+        ) +
+        1px
+      );
+
       #zen-appcontent-navbar-wrapper {
         width: 100% !important;
         height: auto !important;
@@ -225,8 +190,6 @@
     }
   }
 
-  /* URL BAR ---------------------------------------------------------------- */
-
   #urlbar[breakout-extend="true"] > #urlbar-background {
     outline: var(--floaty-border-style) !important;
     outline-offset: var(--floaty-border-offset) !important;
@@ -237,9 +200,10 @@
     border-top: var(--floaty-border-style) !important;
   }
 
-  /* FIND BAR --------------------------------------------------------------- */
-
   @media (-moz-bool-pref: "mod.floaty.use-floating-findbar") {
+    --floaty-findbar-top-margin: var(--mod-floaty-findbar-top-margin);
+    --floaty-findbar-max-width: var(--mod-floaty-findbar-max-width);
+
     findbar {
       max-width: var(--floaty-findbar-max-width) !important;
       position: fixed !important;
@@ -270,8 +234,6 @@
       transition-delay: 0s !important;
     }
   }
-
-  /* STATUS PANEL ----------------------------------------------------------- */
 
   @media (-moz-bool-pref: "mod.floaty.use-floating-statuspanel") {
     #statuspanel-label {
@@ -311,6 +273,44 @@
       color-scheme: dark !important;
     }
   }
+
+  --floaty-bg-theme: var(--zen-main-browser-background);
+  --floaty-bg-default: light-dark(#ebebeb, #1e1e1e);
+
+  /* Fallback when there are no colors from zen theme */
+  &:not([zen-should-be-dark-mode]) {
+    --floaty-bg-theme: rgb(from var(--floaty-bg-default) r g b / 0.72);
+  }
+
+  @media not (-moz-bool-pref: "mod.floaty.use-transparency") {
+    --floaty-bg-theme: var(--zen-main-browser-background-toolbar);
+
+    &:not([zen-should-be-dark-mode]) {
+      --floaty-bg-theme: var(--floaty-bg-default);
+    }
+  }
+
+  --floaty-blur-radius: var(--mod-floaty-blur-radius);
+  --floaty-blur-saturation: var(--mod-floaty-blur-saturation);
+  --floaty-blur-filter: blur(var(--floaty-blur-radius))
+    saturate(var(--floaty-blur-saturation));
+
+  /* Allow blur on Compact Mode */
+  .browserSidebarContainer {
+    will-change: transform !important;
+    backface-visibility: hidden !important;
+  }
+
+  @media not (-moz-bool-pref: "mod.floaty.use-blur") {
+    --floaty-blur-filter: none;
+
+    .browserSidebarContainer {
+      will-change: auto !important;
+      backface-visibility: visible !important;
+    }
+  }
+
+  --grain-bg-url: url(chrome://browser/content/zen-images/grain-bg.png);
 
   #titlebar::after {
     background-image: none !important;
