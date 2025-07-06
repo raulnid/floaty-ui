@@ -105,6 +105,13 @@
     "defaultValue": "128%"
   },
   {
+    "property": "mod.floaty.animation-duration",
+    "label": "Sidebar & Topbar Animation Duration",
+    "type": "string",
+    "placeholder": "0.15s",
+    "defaultValue": "0.15s"
+  },
+  {
     "property": "mod.floaty.findbar-top-margin",
     "label": "Findbar Top Margin",
     "type": "string",
@@ -117,12 +124,5 @@
     "type": "string",
     "placeholder": "1060px",
     "defaultValue": "1060px"
-  },
-  {
-    "property": "mod.floaty.animation-duration",
-    "label": "Sidebar & Topbar Animation Duration",
-    "type": "string",
-    "placeholder": "0.15s",
-    "defaultValue": "0.15s"
   }
 ]
