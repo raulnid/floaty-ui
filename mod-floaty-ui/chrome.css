@@ -8,7 +8,12 @@
   --floaty-findbar-top-margin: var(--mod-floaty-findbar-top-margin);
   --floaty-findbar-max-width: var(--mod-floaty-findbar-max-width);
   --floaty-toolbox-padding: 0.35rem;
-  --floaty-border-width: 1px;
+  --floaty-border-width: 0.5px;
+  --floaty-border-color: light-dark(
+    rgba(0, 0, 0, 0.15),
+    rgba(255, 255, 255, 0.15)
+  );
+  --floaty-border-offset: -2px;
   --floaty-border-radius: 12px;
   --floaty-animation-duration: var(--mod-floaty-animation-duration);
   --grain-bg-url: url(chrome://browser/content/zen-images/grain-bg.png);
@@ -16,7 +21,7 @@
   --floaty-blur-filter: blur(var(--floaty-blur-radius))
     saturate(var(--floaty-blur-saturation));
   --floaty-border-style: var(--floaty-border-width) solid
-    var(--zen-colors-border-contrast);
+    var(--floaty-border-color);
   --floaty-separation-margin: calc(
     var(--zen-element-separation) +
     var(--floaty-margin)
@@ -30,11 +35,7 @@
     var(--zen-element-separation) +
     1px
   );
-  --floaty-bookmark-height: calc(
-    30px +
-    (var(--floaty-toolbox-padding) * 2) +
-    (var(--floaty-border-width) * 2)
-  );
+  --floaty-bookmark-height: calc(30px + (var(--floaty-toolbox-padding) * 2));
   --floaty-bookmark-offset: calc(
     -1 *
     (
@@ -103,16 +104,13 @@
         border-radius: var(--floaty-border-radius) !important;
 
         &::before {
-          outline: none !important;
-        }
-
-        &::before {
           content: "" !important;
           position: absolute !important;
           inset: 0px !important;
           z-index: -1 !important;
           pointer-events: none !important;
-          border: var(--floaty-border-style) !important;
+          outline: var(--floaty-border-style) !important;
+          outline-offset: var(--floaty-border-offset) !important;
           border-radius: var(--floaty-border-radius) !important;
           box-shadow: var(--zen-big-shadow) !important;
         }
@@ -144,7 +142,8 @@
           inset: 0px !important;
           z-index: -1 !important;
           pointer-events: none !important;
-          border: var(--floaty-border-style) !important;
+          outline: var(--floaty-border-style) !important;
+          outline-offset: var(--floaty-border-offset) !important;
           border-radius: var(--floaty-border-radius) !important;
           box-shadow: var(--zen-big-shadow) !important;
         }
@@ -227,6 +226,12 @@
 
   /* URL BAR ---------------------------------------------------------------- */
 
+  #urlbar[breakout-extend="true"] > #urlbar-background {
+    outline: var(--floaty-border-style) !important;
+    outline-offset: var(--floaty-border-offset) !important;
+    border-radius: var(--floaty-border-radius) !important;
+  }
+
   .urlbarView-body-inner {
     border-top: var(--floaty-border-style) !important;
   }
@@ -240,7 +245,8 @@
       inset: var(--floaty-findbar-top-margin) var(--floaty-margin) auto !important;
       margin-inline-start: auto !important;
       padding: var(--floaty-toolbox-padding) !important;
-      border: var(--floaty-border-style) !important;
+      outline: var(--floaty-border-style) !important;
+      outline-offset: var(--floaty-border-offset) !important;
       border-radius: var(--floaty-border-radius) !important;
       box-shadow: var(--zen-big-shadow) !important;
     }
@@ -268,9 +274,10 @@
 
   @media (-moz-bool-pref: "mod.floaty.use-floating-statuspanel") {
     #statuspanel-label {
-      padding: 2px 9px !important;
+      padding: 3px 9px !important;
       margin: var(--floaty-margin) !important;
-      border: var(--floaty-border-style) !important;
+      outline: var(--floaty-border-style) !important;
+      outline-offset: var(--floaty-border-offset) !important;
       border-radius: var(--floaty-border-radius) !important;
       box-shadow: var(--zen-big-shadow) !important;
     }
