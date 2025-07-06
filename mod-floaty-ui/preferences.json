@@ -85,7 +85,7 @@
   },
   {
     "property": "mod.floaty.margin",
-    "label": "Floating Margin",
+    "label": "Toolbar Floating Margin",
     "type": "string",
     "placeholder": "8px",
     "defaultValue": "8px"
