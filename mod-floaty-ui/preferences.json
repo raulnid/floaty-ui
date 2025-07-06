@@ -91,6 +91,20 @@
     "defaultValue": "8px"
   },
   {
+    "property": "mod.floaty.blur-radius",
+    "label": "Toolbar Blur Radius",
+    "type": "string",
+    "placeholder": "32px",
+    "defaultValue": "32px"
+  },
+  {
+    "property": "mod.floaty.blur-saturation",
+    "label": "Toolbar Blur Saturation",
+    "type": "string",
+    "placeholder": "128%",
+    "defaultValue": "128%"
+  },
+  {
     "property": "mod.floaty.findbar-top-margin",
     "label": "Findbar Top Margin",
     "type": "string",

@@ -2,8 +2,8 @@
 :root[zen-compact-mode="true"]:not([customizing]) {
   --floaty-bg-theme: var(--zen-main-browser-background);
   --floaty-bg-default: light-dark(#ebebeb, #1e1e1e);
-  --floaty-blur-radius: 32px;
-  --floaty-blur-saturation: 128%;
+  --floaty-blur-radius: var(--mod-floaty-blur-radius);
+  --floaty-blur-saturation: var(--mod-floaty-blur-saturation);
   --floaty-margin: var(--mod-floaty-margin);
   --floaty-findbar-top-margin: var(--mod-floaty-findbar-top-margin);
   --floaty-findbar-max-width: var(--mod-floaty-findbar-max-width);
