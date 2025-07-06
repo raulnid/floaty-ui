@@ -266,7 +266,7 @@
     }
   }
 
-  &[zen-should-be-dark-mode="true"] #urlbar {
+  &[zen-should-be-dark-mode="true"] {
     #urlbar,
     findbar,
     #statuspanel-label {
