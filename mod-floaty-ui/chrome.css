@@ -15,6 +15,7 @@
   );
   --floaty-border-offset: -2px;
   --floaty-border-radius: 12px;
+  --floaty-border-radius-medium: calc(var(--floaty-border-radius) * (2 / 3)) !important;
   --floaty-animation-duration: var(--mod-floaty-animation-duration);
   --grain-bg-url: url(chrome://browser/content/zen-images/grain-bg.png);
 
@@ -254,7 +255,7 @@
     .findbar-textbox {
       background: var(--zen-toolbar-element-bg) !important;
       border: var(--toolbarbutton-outline) !important;
-      border-radius: 8px !important;
+      border-radius: var(--floaty-border-radius-medium) !important;
       box-shadow: none !important;
     }
 
