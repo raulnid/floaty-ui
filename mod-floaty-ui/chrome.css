@@ -284,6 +284,16 @@
     }
   }
 
+  #zen-toast-container {
+    --zen-toast-spacing: var(--floaty-margin) !important;
+
+    .zen-toast {
+      min-height: auto !important;
+      padding: var(--floaty-toolbox-padding) !important;
+      border-radius: var(--floaty-border-radius) !important;
+    }
+  }
+
   /* THEME -------------------------------------------------------------------*/
 
   &[zen-should-be-dark-mode="false"] {
