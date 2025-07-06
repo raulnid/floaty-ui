@@ -312,14 +312,19 @@
 
   --grain-bg-url: url(chrome://browser/content/zen-images/grain-bg.png);
 
-  /* Disable grain so the default background can work correctly */
-  #titlebar::after {
+  /* Reset grain layer so the default background can work correctly */
+  #titlebar::after,
+  #zen-appcontent-navbar-container::before {
     background-image: none !important;
     opacity: 1 !important;
     mix-blend-mode: normal !important;
   }
 
-  #titlebar::before {
+  #titlebar::before,
+  #zen-appcontent-navbar-container::before,
+  #urlbar[breakout-extend="true"] > #urlbar-background,
+  findbar,
+  #statuspanel-label {
     background: var(--floaty-bg-default) !important;
   }
 
@@ -343,17 +348,6 @@
     }
   }
 
-  /* Disable grain so the default background can work correctly */
-  #zen-appcontent-navbar-container::before {
-    background-image: none !important;
-    opacity: 1 !important;
-    mix-blend-mode: normal !important;
-  }
-
-  #zen-appcontent-navbar-container::before {
-    background: var(--floaty-bg-default) !important;
-  }
-
   @media (-moz-bool-pref: "mod.floaty.use-themed-topbar") {
     #zen-appcontent-navbar-container {
       &::before {
@@ -374,10 +368,6 @@
     }
   }
 
-  #urlbar[breakout-extend="true"] > #urlbar-background {
-    background: var(--floaty-bg-default) !important;
-  }
-
   @media (-moz-bool-pref: "mod.floaty.use-themed-urlbar") {
     #urlbar[breakout-extend="true"] > #urlbar-background {
       background: var(--floaty-bg-theme) !important;
@@ -394,10 +384,6 @@
         border-radius: var(--floaty-border-radius) !important;
       }
     }
-  }
-
-  findbar {
-    background: var(--floaty-bg-default) !important;
   }
 
   @media (-moz-bool-pref: "mod.floaty.use-themed-findbar") {
@@ -417,10 +403,6 @@
         border-radius: var(--floaty-border-radius) !important;
       }
     }
-  }
-
-  #statuspanel-label {
-    background: var(--floaty-bg-default) !important;
   }
 
   @media (-moz-bool-pref: "mod.floaty.use-themed-statuspanel") {
