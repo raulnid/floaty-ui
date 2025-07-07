@@ -182,9 +182,10 @@
       }
 
       #urlbar[breakout-extend="true"]:not([zen-floating-urlbar="true"]) {
+        width: var(--urlbar-width) !important;
         top: calc(
-          var(--floaty-separation-margin) +
-          var(--floaty-toolbox-padding)
+          (var(--floaty-separation-margin) + var(--floaty-toolbox-padding)) -
+          1px
         ) !important;
       }
     }
