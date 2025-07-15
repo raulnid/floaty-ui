@@ -111,11 +111,11 @@
     }
 
     @media (-moz-bool-pref: "zen.view.use-single-toolbar") {
-      --floaty-bookmark-height: calc(30px + (var(--floaty-toolbox-padding) * 2));
-      --floaty-bookmark-offset: calc(
+      --floaty-topbar-height: calc(30px + (var(--floaty-toolbox-padding) * 2));
+      --floaty-topbar-offset: calc(
         -1 *
         (
-          var(--floaty-bookmark-height) +
+          var(--floaty-topbar-height) +
           (var(--floaty-margin) * 2) +
           var(--zen-element-separation)
         ) +
@@ -126,7 +126,7 @@
         width: 100% !important;
         height: auto !important;
         opacity: 1 !important;
-        top: var(--floaty-bookmark-offset) !important;
+        top: var(--floaty-topbar-offset) !important;
         transition: top var(--floaty-animation-duration) ease-in-out !important;
 
         &[zen-has-hover="true"],
@@ -148,7 +148,7 @@
 
       #zen-appcontent-navbar-container {
         opacity: 1 !important;
-        min-height: var(--floaty-bookmark-height) !important;
+        min-height: var(--floaty-topbar-height) !important;
       }
 
       .titlebar-buttonbox-container {
