@@ -376,6 +376,13 @@
         border-radius: var(--floaty-border-radius) !important;
       }
     }
+
+    &[zen-should-be-dark-mode] {
+      .urlbarView-url,
+      .urlbarView-title-separator::before {
+        color: inherit !important;
+      }
+    }
   }
 
   @media (-moz-bool-pref: "mod.floaty.use-themed-findbar") {
