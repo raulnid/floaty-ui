@@ -21,7 +21,7 @@ Compact Mode, but it floats. Supports Zen Color Picker and background blur.
     "mod-floaty-ui": {
       "id": "mod-floaty-ui",
       "name": "Floaty UI",
-      "description": "Floating Mode for Zen Browser! This mod will turn Compact Mode into Floating Mode.",
+      "description": "Compact Mode, but it floats. Supports Zen Color Picker and background blur.",
       "homepage": "https://github.com/moktavizen/floaty-ui",
       "style": "https://raw.githubusercontent.com/moktavizen/floaty-ui/refs/heads/main/mod-floaty-ui/chrome.css",
       "preferences": "https://raw.githubusercontent.com/moktavizen/floaty-ui/refs/heads/main/mod-floaty-ui/preferences.json",
