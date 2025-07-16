@@ -4,7 +4,7 @@ Compact Mode, but it floats. Supports Zen Color Picker and background blur.
 
 ## Preview
 
-![Floaty UI preview](./preview.png)
+![Floaty UI preview](./media/preview.png)
 
 ## Install
 
@@ -22,7 +22,7 @@ Compact Mode, but it floats. Supports Zen Color Picker and background blur.
       "style": "https://raw.githubusercontent.com/moktavizen/floaty-ui/refs/heads/main/mod-floaty-ui/chrome.css",
       "preferences": "https://raw.githubusercontent.com/moktavizen/floaty-ui/refs/heads/main/mod-floaty-ui/preferences.json",
       "readme": "https://raw.githubusercontent.com/moktavizen/floaty-ui/refs/heads/main/mod-floaty-ui/README.md",
-      "image": "https://raw.githubusercontent.com/moktavizen/floaty-ui/refs/heads/main/preview-store.png",
+      "image": "https://raw.githubusercontent.com/moktavizen/floaty-ui/refs/heads/main/media/preview-store.png",
       "author": "moktavizen",
       "version": "1.0.0",
       "tags": [],
