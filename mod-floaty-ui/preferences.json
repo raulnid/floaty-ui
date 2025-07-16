@@ -67,7 +67,7 @@
   },
   {
     "property": "mod.floaty.use-grain",
-    "label": "Background Grain",
+    "label": "Background Grain (May increase CPU usage)",
     "type": "checkbox",
     "defaultValue": false
   },
