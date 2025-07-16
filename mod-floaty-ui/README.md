@@ -1,1 +1,1 @@
-Floating Mode for Zen Browser! This mod will turn Compact Mode into Floating Mode.
+Compact Mode, but it floats. Supports Zen Color Picker and background blur.
