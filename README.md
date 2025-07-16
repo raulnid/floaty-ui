@@ -6,6 +6,10 @@ Compact Mode, but it floats. Supports Zen Color Picker and background blur.
 
 ![Floaty UI preview](./media/preview.png)
 
+## Settings
+
+![Floaty UI settings](./media/settings.png)
+
 ## Install
 
 ### Manual
