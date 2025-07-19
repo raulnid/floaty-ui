@@ -25,9 +25,9 @@ Compact Mode, but it floats. Supports Zen Color Picker and background blur.
       "name": "Floaty UI",
       "description": "Compact Mode, but it floats. Supports Zen Color Picker and background blur.",
       "homepage": "https://github.com/moktavizen/floaty-ui",
-      "style": "https://raw.githubusercontent.com/moktavizen/floaty-ui/refs/heads/main/mod-floaty-ui/chrome.css",
-      "preferences": "https://raw.githubusercontent.com/moktavizen/floaty-ui/refs/heads/main/mod-floaty-ui/preferences.json",
-      "readme": "https://raw.githubusercontent.com/moktavizen/floaty-ui/refs/heads/main/mod-floaty-ui/README.md",
+      "style": "https://raw.githubusercontent.com/moktavizen/floaty-ui/refs/heads/main/chrome.css",
+      "preferences": "https://raw.githubusercontent.com/moktavizen/floaty-ui/refs/heads/main/preferences.json",
+      "readme": "https://raw.githubusercontent.com/moktavizen/floaty-ui/refs/heads/main/README.md",
       "image": "https://raw.githubusercontent.com/moktavizen/floaty-ui/refs/heads/main/media/preview-store.png",
       "author": "moktavizen",
       "version": "1.0.0",
@@ -51,8 +51,8 @@ Compact Mode, but it floats. Supports Zen Color Picker and background blur.
     }
     ```
 
-3. Replace the content of `zen-theme.json` in your [profile folder](https://docs.zen-browser.app/guides/live-editing#step-1-access-the-profile-folder) with the edited JSON
-4. Copy `mod-floaty-ui` folder into `zen-themes` folder inside your [chrome folder](https://docs.zen-browser.app/guides/live-editing#step-2-create-the-chrome-folder)
+3. Go to <code>[profile folder](https://docs.zen-browser.app/guides/live-editing#step-1-access-the-profile-folder)</code> and replace the content of `zen-theme.json` with the edited JSON
+4. Go to <code>[chrome folder](https://docs.zen-browser.app/guides/live-editing#step-2-create-the-chrome-folder) > zen-themes</code> and create a folder called `mod-floaty-ui`, and place `chrome.css` and `preferences.json` inside of it
 5. Restart Zen Browser and enable it from `Settings > Zen Mods`
 
 ## Uninstall
