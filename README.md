@@ -12,6 +12,15 @@ Compact Mode, but it floats. Supports Zen Color Picker and background blur.
 
 ## Install
 
+### Sine
+
+1. Install [Sine](https://github.com/CosmoCreeper/Sine)
+2. Go to `Settings > Sine Mods` search for `floaty ui` and click install
+
+### Zen Mods
+
+Waiting for https://github.com/zen-browser/theme-store/pull/1585
+
 ### Manual
 
 1. Export your mod list from `Settings > Zen Mods > Export Mods`
@@ -55,4 +64,4 @@ Compact Mode, but it floats. Supports Zen Color Picker and background blur.
 
 ## Uninstall
 
-1. Go to `Settings > Zen Mods > Remove Theme`
+1. Go to `Settings > Zen/Sine Mods > Remove`
