@@ -1,6 +1,6 @@
-# Floaty UI
-
 ![Floaty UI demo](./media/demo.avif)
+
+# Floaty UI <a href="https://github.com/moktavizen/floaty-ui?tab=readme-ov-file#floaty-ui-"><img height="24" src="./media/zen-mods-badge.png" alt="zen mods badge"></a>
 
 Compact Mode, but it floats.
 
