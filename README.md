@@ -1,10 +1,23 @@
 # Floaty UI
 
-Compact Mode, but it floats. Supports Zen Color Picker and background blur.
-
-## Preview
-
 ![Floaty UI demo](./media/demo.avif)
+
+Compact Mode, but it floats.
+
+> [!NOTE]
+> - This mod only works in Compact Mode
+> - Optional `about:config`:
+>   - Set `zen.theme.content-element-separation` to 0 to enhance the floating feel
+
+## Features
+
+- Floating Sidebar, Topbar, Findbar, Statuspanel
+- Themed Sidebar, Topbar, URL bar, Findbar, Statuspanel
+- Supports Zen Color Picker
+- Supports background blur and grain
+- Smaller Zen Notifications
+- Works on all 3 layout, Single Toolbar, Multiple Toolbars, Collapsed Toolbar
+- Lots of settings to customize
 
 ## Settings
 
