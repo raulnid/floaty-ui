@@ -81,3 +81,15 @@ Waiting for https://github.com/zen-browser/theme-store/pull/1585
 ## Uninstall
 
 1. Go to `Settings > Zen/Sine Mods > Remove`
+
+## FAQ
+
+### How to use custom color scheme?
+
+1. Disable standalone color scheme mod
+2. Find the hex color for the color scheme, for example, [Catppuccin Mocha](https://catppuccin.com/palette/#:~:text=Mocha,-Color)
+3. Go to `about:config`
+   - Set `zen.theme.accent-color` to `#8aadf4` (Catppuccin Blue)
+   - Set `zen.theme.gradient.show-custom-colors` to `true`
+4. Right click in sidebar > Edit Theme > Set custom color to `#1e1e2e` (Catppuccin Base) > Set the transparency > Click plus icon
+5. Results ![Catpuccin Mocha with Floaty UI preview](./media/catpuccin-mocha.png)
