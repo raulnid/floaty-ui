@@ -39,8 +39,7 @@
       );
       --floaty-sidebar-margin-total: calc(
         var(--floaty-sidebar-margin) +
-        var(--zen-element-separation) +
-        1px
+        var(--zen-element-separation)
       );
 
       #navigator-toolbox {
