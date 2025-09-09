@@ -8,7 +8,7 @@
   "style": "https://raw.githubusercontent.com/moktavizen/floaty-ui/refs/heads/main/chrome.css",
   "preferences": "https://raw.githubusercontent.com/moktavizen/floaty-ui/refs/heads/main/preferences.json",
   "author": "moktavizen",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "tags": ["compact", "compact mode", "float"],
   "createdAt": "2025-06-29",
   "updatedAt": "2025-06-29",

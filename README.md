@@ -53,7 +53,7 @@ Waiting for https://github.com/zen-browser/theme-store/pull/1585
       "readme": "https://raw.githubusercontent.com/moktavizen/floaty-ui/refs/heads/main/README.md",
       "image": "https://raw.githubusercontent.com/moktavizen/floaty-ui/refs/heads/main/media/preview-store.png",
       "author": "moktavizen",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "tags": [],
       "createdAt": "2025-06-29",
       "updatedAt": "2025-06-29",
