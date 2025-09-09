@@ -19,8 +19,8 @@ Compact Mode, but it floats.
 
 ## `about:config`
 
-- Optional: Set `zen.theme.content-element-separation` to 0 to enhance the floating feel
 - Conflict: Background blur is not compatible with `browser.tabs.allow_transparent_browser`
+- Optional: Set `zen.theme.content-element-separation` to 1 to enhance the floating feel
 
 ## Settings
 
