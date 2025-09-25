@@ -201,9 +201,18 @@
   }
 
   #urlbar[breakout-extend="true"] > .urlbar-background {
-    outline: var(--floaty-border-style) !important;
-    outline-offset: var(--floaty-border-offset) !important;
-    border-radius: var(--floaty-border-radius) !important;
+    background: none !important;
+
+    &::before {
+      content: "" !important;
+      position: absolute !important;
+      inset: 0px !important;
+      z-index: -1 !important;
+      pointer-events: none !important;
+      outline: var(--floaty-border-style) !important;
+      outline-offset: var(--floaty-border-offset) !important;
+      border-radius: var(--floaty-border-radius) !important;
+    }
   }
 
   .urlbarView-body-inner {
@@ -220,10 +229,23 @@
       inset: var(--floaty-findbar-top-margin) var(--floaty-margin) auto !important;
       margin-inline-start: auto !important;
       padding: var(--floaty-toolbox-padding) !important;
-      outline: var(--floaty-border-style) !important;
-      outline-offset: var(--floaty-border-offset) !important;
+      background: none !important;
+      border: none !important;
       border-radius: var(--floaty-border-radius) !important;
-      box-shadow: var(--zen-big-shadow) !important;
+
+      &::before {
+        background: none !important;
+        content: "" !important;
+        position: absolute !important;
+        inset: 0px !important;
+        z-index: -1 !important;
+        pointer-events: none !important;
+        outline: var(--floaty-border-style) !important;
+        outline-offset: var(--floaty-border-offset) !important;
+        border-radius: var(--floaty-border-radius) !important;
+        box-shadow: var(--zen-big-shadow) !important;
+        overflow: clip !important;
+      }
     }
 
     .findbar-textbox {
@@ -249,10 +271,18 @@
     #statuspanel-label {
       padding: 3px 9px !important;
       margin: var(--floaty-margin) !important;
-      outline: var(--floaty-border-style) !important;
-      outline-offset: var(--floaty-border-offset) !important;
-      border-radius: var(--floaty-border-radius) !important;
-      box-shadow: var(--zen-big-shadow) !important;
+
+      &::before {
+        content: "" !important;
+        position: absolute !important;
+        inset: 0px !important;
+        z-index: -1 !important;
+        pointer-events: none !important;
+        outline: var(--floaty-border-style) !important;
+        outline-offset: var(--floaty-border-offset) !important;
+        border-radius: var(--floaty-border-radius) !important;
+        box-shadow: var(--zen-big-shadow) !important;
+      }
     }
   }
 
@@ -270,18 +300,12 @@
   /* Theme */
   /* ======================================================================== */
 
-  --floaty-bg-theme: rgb(
-    from var(--zen-main-browser-background) r g b /
-    var(--mod-floaty-transparency-value)
-  );
+  --floaty-bg-theme: var(--zen-main-browser-background);
   --floaty-bg-default: light-dark(#ebebeb, #1e1e1e);
 
   /* Fallback when there are no colors from zen theme */
   &:not([zen-should-be-dark-mode]) {
-    --floaty-bg-theme: rgb(
-      from var(--floaty-bg-default) r g b /
-      var(--mod-floaty-transparency-value)
-    );
+    --floaty-bg-theme: var(--floaty-bg-default);
   }
 
   @media not (-moz-bool-pref: "mod.floaty.use-transparency") {
@@ -321,34 +345,42 @@
 
   #titlebar::before,
   #zen-appcontent-navbar-container::before,
-  #urlbar[breakout-extend="true"] > .urlbar-background,
-  findbar,
-  #statuspanel-label {
+  #urlbar[breakout-extend="true"] > .urlbar-background::before,
+  findbar::before,
+  #statuspanel-label::before {
     background: var(--floaty-bg-default) !important;
   }
 
   @media (-moz-bool-pref: "mod.floaty.use-themed-sidebar") {
     #titlebar {
+      backdrop-filter: var(--floaty-blur-filter) !important;
+
       &::before {
         background: var(--floaty-bg-theme) !important;
-        backdrop-filter: var(--floaty-blur-filter) !important;
+        opacity: var(--mod-floaty-transparency-value) !important;
       }
     }
   }
 
   @media (-moz-bool-pref: "mod.floaty.use-themed-topbar") {
     #zen-appcontent-navbar-container {
+      backdrop-filter: var(--floaty-blur-filter) !important;
+
       &::before {
         background: var(--floaty-bg-theme) !important;
-        backdrop-filter: var(--floaty-blur-filter) !important;
+        opacity: var(--mod-floaty-transparency-value) !important;
       }
     }
   }
 
   @media (-moz-bool-pref: "mod.floaty.use-themed-urlbar") {
     #urlbar[breakout-extend="true"] > .urlbar-background {
-      background: var(--floaty-bg-theme) !important;
       backdrop-filter: var(--floaty-blur-filter) !important;
+
+      &::before {
+        background: var(--floaty-bg-theme) !important;
+        opacity: var(--mod-floaty-transparency-value) !important;
+      }
     }
 
     &[zen-should-be-dark-mode] {
@@ -361,15 +393,23 @@
 
   @media (-moz-bool-pref: "mod.floaty.use-themed-findbar") {
     findbar {
-      background: var(--floaty-bg-theme) !important;
       backdrop-filter: var(--floaty-blur-filter) !important;
+
+      &::before {
+        background: var(--floaty-bg-theme) !important;
+        opacity: var(--mod-floaty-transparency-value) !important;
+      }
     }
   }
 
   @media (-moz-bool-pref: "mod.floaty.use-themed-statuspanel") {
     #statuspanel-label {
-      background: var(--floaty-bg-theme) !important;
       backdrop-filter: var(--floaty-blur-filter) !important;
+
+      &::before {
+        background: var(--floaty-bg-theme) !important;
+        opacity: var(--mod-floaty-transparency-value) !important;
+      }
     }
   }
 }
