@@ -76,6 +76,11 @@
           box-shadow: var(--zen-big-shadow) !important;
         }
       }
+
+      #zen-toolbar-background,
+      #zen-toolbar-background::after {
+        background: transparent !important;
+      }
     }
   }
 
