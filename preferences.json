@@ -99,6 +99,13 @@
     "defaultValue": "128%"
   },
   {
+    "property": "mod.floaty.transparency-value",
+    "label": "Toolbar Transparency Value",
+    "type": "string",
+    "placeholder": "0.72",
+    "defaultValue": "0.72"
+  },
+  {
     "property": "mod.floaty.animation-duration",
     "label": "Sidebar & Topbar Animation Duration",
     "type": "string",

@@ -270,12 +270,18 @@
   /* Theme */
   /* ======================================================================== */
 
-  --floaty-bg-theme: var(--zen-main-browser-background);
+  --floaty-bg-theme: rgb(
+    from var(--zen-main-browser-background) r g b /
+    var(--mod-floaty-transparency-value)
+  );
   --floaty-bg-default: light-dark(#ebebeb, #1e1e1e);
 
   /* Fallback when there are no colors from zen theme */
   &:not([zen-should-be-dark-mode]) {
-    --floaty-bg-theme: rgb(from var(--floaty-bg-default) r g b / 0.72);
+    --floaty-bg-theme: rgb(
+      from var(--floaty-bg-default) r g b /
+      var(--mod-floaty-transparency-value)
+    );
   }
 
   @media not (-moz-bool-pref: "mod.floaty.use-transparency") {
