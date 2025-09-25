@@ -200,7 +200,7 @@
     }
   }
 
-  #urlbar[breakout-extend="true"] > #urlbar-background {
+  #urlbar[breakout-extend="true"] > .urlbar-background {
     outline: var(--floaty-border-style) !important;
     outline-offset: var(--floaty-border-offset) !important;
     border-radius: var(--floaty-border-radius) !important;
@@ -325,7 +325,7 @@
 
   #titlebar::before,
   #zen-appcontent-navbar-container::before,
-  #urlbar[breakout-extend="true"] > #urlbar-background,
+  #urlbar[breakout-extend="true"] > .urlbar-background,
   findbar,
   #statuspanel-label {
     background: var(--floaty-bg-default) !important;
@@ -372,7 +372,7 @@
   }
 
   @media (-moz-bool-pref: "mod.floaty.use-themed-urlbar") {
-    #urlbar[breakout-extend="true"] > #urlbar-background {
+    #urlbar[breakout-extend="true"] > .urlbar-background {
       background: var(--floaty-bg-theme) !important;
       backdrop-filter: var(--floaty-blur-filter) !important;
 
