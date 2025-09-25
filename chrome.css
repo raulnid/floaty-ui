@@ -14,7 +14,10 @@
   --floaty-border-style: var(--floaty-border-width) solid
     var(--floaty-border-color);
   --floaty-border-radius: 12px;
-  --floaty-border-radius-medium: calc(var(--floaty-border-radius) * (2 / 3)) !important;
+  --floaty-border-radius-medium: calc(
+    var(--floaty-border-radius) *
+    (2 / 3)
+  ) !important;
   --floaty-border-offset: -2px;
 
   --floaty-margin: var(--mod-floaty-margin);
