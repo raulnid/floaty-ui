@@ -12,7 +12,7 @@ Compact Mode, but it floats.
 - Floating Sidebar, Topbar, Findbar, Statuspanel
 - Themed Sidebar, Topbar, URL bar, Findbar, Statuspanel
 - Supports Zen Color Picker
-- Supports background blur and grain
+- Supports background blur
 - Smaller Zen Notifications
 - Works on all 3 layout, Single Toolbar, Multiple Toolbars, Collapsed Toolbar
 - Lots of settings to customize

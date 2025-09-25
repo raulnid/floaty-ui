@@ -313,16 +313,6 @@
     }
   }
 
-  --grain-bg-url: url(chrome://browser/content/zen-images/grain-bg.png);
-
-  /* Reset grain layer so the default background can work correctly */
-  #titlebar::after,
-  #zen-appcontent-navbar-container::before {
-    background-image: none !important;
-    opacity: 1 !important;
-    mix-blend-mode: normal !important;
-  }
-
   #titlebar::before,
   #zen-appcontent-navbar-container::before,
   #urlbar[breakout-extend="true"] > .urlbar-background,
@@ -337,17 +327,6 @@
         background: var(--floaty-bg-theme) !important;
         backdrop-filter: var(--floaty-blur-filter) !important;
       }
-
-      &::after {
-        content: "" !important;
-        position: absolute !important;
-        inset: 0 !important;
-        z-index: 0 !important;
-        pointer-events: none !important;
-        background-image: var(--grain-bg-url) !important;
-        opacity: var(--zen-grainy-background-opacity, 0) !important;
-        border-radius: var(--floaty-border-radius) !important;
-      }
     }
   }
 
@@ -357,17 +336,6 @@
         background: var(--floaty-bg-theme) !important;
         backdrop-filter: var(--floaty-blur-filter) !important;
       }
-
-      &::after {
-        content: "" !important;
-        position: absolute !important;
-        inset: 0 !important;
-        z-index: 0 !important;
-        pointer-events: none !important;
-        background-image: var(--grain-bg-url) !important;
-        opacity: var(--zen-grainy-background-opacity, 0) !important;
-        border-radius: var(--floaty-border-radius) !important;
-      }
     }
   }
 
@@ -375,17 +343,6 @@
     #urlbar[breakout-extend="true"] > .urlbar-background {
       background: var(--floaty-bg-theme) !important;
       backdrop-filter: var(--floaty-blur-filter) !important;
-
-      &::after {
-        content: "" !important;
-        position: absolute !important;
-        inset: 0 !important;
-        z-index: 0 !important;
-        pointer-events: none !important;
-        background-image: var(--grain-bg-url) !important;
-        opacity: var(--zen-grainy-background-opacity, 0) !important;
-        border-radius: var(--floaty-border-radius) !important;
-      }
     }
 
     &[zen-should-be-dark-mode] {
@@ -400,17 +357,6 @@
     findbar {
       background: var(--floaty-bg-theme) !important;
       backdrop-filter: var(--floaty-blur-filter) !important;
-
-      &::after {
-        content: "" !important;
-        position: absolute !important;
-        inset: 0 !important;
-        z-index: 0 !important;
-        pointer-events: none !important;
-        background-image: var(--grain-bg-url) !important;
-        opacity: var(--zen-grainy-background-opacity, 0) !important;
-        border-radius: var(--floaty-border-radius) !important;
-      }
     }
   }
 
@@ -418,20 +364,6 @@
     #statuspanel-label {
       background: var(--floaty-bg-theme) !important;
       backdrop-filter: var(--floaty-blur-filter) !important;
-    }
-  }
-
-  /* Background grain toggle */
-  /* High CPU during testing  */
-  /* https://github.com/zen-browser/desktop/issues/6302 */
-  @media not (-moz-bool-pref: "mod.floaty.use-grain") {
-    #zen-browser-grain,
-    #PanelUI-zen-gradient-generator-texture-wrapper::before,
-    #titlebar::after,
-    #zen-appcontent-navbar-container::after,
-    #urlbar[breakout-extend="true"] > #urlbar-background::after,
-    findbar::after {
-      display: none !important;
     }
   }
 }

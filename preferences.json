@@ -66,12 +66,6 @@
     "defaultValue": true
   },
   {
-    "property": "mod.floaty.use-grain",
-    "label": "Background Grain (May increase CPU usage)",
-    "type": "checkbox",
-    "defaultValue": false
-  },
-  {
     "property": "mod.floaty.use-animation",
     "label": "Sidebar & Topbar Animation",
     "type": "checkbox",
