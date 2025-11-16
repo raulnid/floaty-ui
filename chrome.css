@@ -142,7 +142,7 @@
         &[zen-has-hover="true"],
         &[has-popup-menu],
         &:has(#PlacesChevron[open="true"]) {
-          top: 0px !important;
+          transform: translateY(0px) !important;
         }
 
         @media (-moz-bool-pref: "zen.view.experimental-no-window-controls") {
