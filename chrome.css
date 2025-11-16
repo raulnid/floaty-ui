@@ -134,15 +134,20 @@
 
       #zen-appcontent-navbar-wrapper {
         width: 100% !important;
-        height: auto !important;
+        height: 0 !important;
         opacity: 1 !important;
-        top: var(--floaty-topbar-offset) !important;
-        transition: top var(--floaty-animation-duration) ease-in-out !important;
-
+        top: 0px !important;
+        transform: translateY(var(--floaty-topbar-offset)) !important;
+        transition: transform var(--floaty-animation-duration) ease-in-out !important;
+        will-change: transform !important;
+        overflow: visible !important;
+        pointer-events: none !important;
+        
         &[zen-has-hover="true"],
         &[has-popup-menu],
         &:has(#PlacesChevron[open="true"]) {
           transform: translateY(0px) !important;
+          pointer-events: auto !important;
         }
 
         @media (-moz-bool-pref: "zen.view.experimental-no-window-controls") {
@@ -159,6 +164,7 @@
       #zen-appcontent-navbar-container {
         opacity: 1 !important;
         min-height: var(--floaty-topbar-height) !important;
+        pointer-events: auto !important;
       }
 
       .titlebar-buttonbox-container {
@@ -168,6 +174,14 @@
       #zen-tabbox-wrapper {
         margin: var(--zen-element-separation) !important;
       }
+    }
+    #browser{
+      position: relative !important;
+    }
+
+    #appcontent {
+      position: relative !important;
+      height: 100vh !important;
     }
 
     @media (not (-moz-bool-pref: "zen.view.use-single-toolbar")) and (-moz-bool-pref: "zen.view.compact.hide-toolbar") {
