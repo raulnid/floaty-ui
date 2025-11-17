@@ -182,6 +182,7 @@
 
     #appcontent {
       position: relative !important;
+      height: auto !important;
     }
 
     @media (not (-moz-bool-pref: "zen.view.use-single-toolbar")) and (-moz-bool-pref: "zen.view.compact.hide-toolbar") {
