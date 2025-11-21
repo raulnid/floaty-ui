@@ -89,7 +89,6 @@
       (not (-moz-bool-pref: "zen.view.use-single-toolbar")) and (-moz-bool-pref: "zen.view.compact.hide-toolbar") {
       #zen-appcontent-navbar-wrapper {
         box-sizing: border-box !important;
-        position: fixed !important;
         padding: 0 !important;
         width: 99% !important;
       }
@@ -187,7 +186,6 @@
 
     @media (not (-moz-bool-pref: "zen.view.use-single-toolbar")) and (-moz-bool-pref: "zen.view.compact.hide-toolbar") {
       #zen-appcontent-navbar-wrapper {
-        padding-top: calc(var(--floaty-separation-margin) + 1px) !important;
         transition-duration: var(--floaty-animation-duration) !important;
 
         &:not([zen-has-hover="true"]) {
