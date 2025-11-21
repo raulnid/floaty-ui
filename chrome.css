@@ -91,7 +91,6 @@
         box-sizing: border-box !important;
         padding: 0 !important;
         width: 99% !important;
-        --zen-main-browser-background: None;
       }
 
       #zen-appcontent-navbar-container {
